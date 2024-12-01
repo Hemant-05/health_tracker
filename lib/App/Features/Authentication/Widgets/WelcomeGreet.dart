@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:health_tracker/App/Utils/Constants/MyColors.dart';
 import 'package:health_tracker/App/Utils/Constants/MySizes.dart';
 import 'package:health_tracker/App/Utils/Constants/TextStrings.dart';
 
@@ -13,8 +14,8 @@ class WelcomeGreet extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          TextStrings.loginTitle,
-          style: Theme.of(context).textTheme.headlineLarge,
+          TextStrings.welcome,
+          style: Theme.of(context).textTheme.headlineMedium!.copyWith(color: MyColors.primary),
         ),
         const SizedBox(
           height: MySizes.sm,

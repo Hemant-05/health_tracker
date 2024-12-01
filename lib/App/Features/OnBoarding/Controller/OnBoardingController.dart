@@ -20,8 +20,9 @@ class OnBoardingController extends GetxController {
     }
   }
 
-  void skipPage() {
-    currentPageIndex.value = 2;
-    pageController.jumpToPage(2);
+  void skipPage(BuildContext context) {
+    /*currentPageIndex.value = 2;
+    pageController.jumpToPage(2);*/
+    MyHelperFunctions.navigateToScreen(context, const StartScreen());
   }
 }

@@ -41,6 +41,11 @@ class MyHelperFunctions {
       ),
     );
   }
+
+  static void popUp(BuildContext context) {
+    Navigator.pop(context);
+  }
+
   static void navigateToScreenRemoveUntil(BuildContext context, Widget screen) {
     Navigator.pushAndRemoveUntil(
       context,

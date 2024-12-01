@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:health_tracker/App/Utils/Constants/MyColors.dart';
 import 'package:health_tracker/App/Utils/Constants/MySizes.dart';
 import 'package:health_tracker/App/Utils/Helpers/Helpers.dart';
 
@@ -25,7 +26,7 @@ class OnBoardingPage extends StatelessWidget {
           ),
           Text(
             title,
-            style: Theme.of(context).textTheme.headlineMedium,
+            style: Theme.of(context).textTheme.headlineMedium!.copyWith(color: MyColors.primary),
             textAlign: TextAlign.center,
           ),
           const SizedBox(

@@ -14,5 +14,6 @@ class IconsString{
   static const String settingsIcon = "assets/icons/settings.svg";
   static const String walletIcon = "assets/icons/wallet.svg";
   static const String webIcon = "assets/icons/web.svg";
+  static const String backIcon = "assets/icons/back.svg";
 
 }

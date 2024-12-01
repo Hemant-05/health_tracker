@@ -17,12 +17,14 @@ class OnBoardingDotIndicator extends StatelessWidget {
     final dark = MyHelperFunctions.isDarkMode(context);
 
     return Positioned(
-      bottom: MyDeviceUtils.getAppBarHeight() * 3,
-      right: MyDeviceUtils.getScreenWidth(context) * .35,
+      bottom: MyDeviceUtils.getAppBarHeight() * 2.5,
+      right: MyDeviceUtils.getScreenWidth(context) * .45,
       child: SmoothPageIndicator(
         controller: OnBoardingController.instance.pageController,
         count: 3,
         effect: ExpandingDotsEffect(
+          dotHeight: 6,
+            dotWidth: 6,
             activeDotColor: dark? MyColors.white : MyColors.primary ),
       ),
     );

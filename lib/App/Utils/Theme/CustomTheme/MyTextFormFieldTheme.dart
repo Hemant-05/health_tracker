@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:health_tracker/App/Utils/Constants/MyColors.dart';
 
 class MyTextFormFieldTheme {
   MyTextFormFieldTheme._();
@@ -23,29 +24,34 @@ class MyTextFormFieldTheme {
 
     border: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(14),
-      borderSide: const BorderSide(width: 1, color: Colors.grey),
+      borderSide: BorderSide.none,
     ),
+
+    filled: true,
+    fillColor: MyColors.secondary,
+
 
     enabledBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(14),
-      borderSide: const BorderSide(width: 1, color: Colors.grey),
+      borderSide: BorderSide.none,
     ),
 
     focusedBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(14),
-      borderSide: const BorderSide(width: 1, color: Colors.black12),
+      borderSide: BorderSide.none,
     ),
 
     errorBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(14),
-      borderSide: const BorderSide(width: 1, color: Colors.red),
+      borderSide: BorderSide.none,
     ),
 
     focusedErrorBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(14),
-      borderSide: const BorderSide(width: 2, color: Colors.orange),
+      borderSide: BorderSide.none,
     ),
   );
+
 
   static InputDecorationTheme darkInputDecorationTheme = InputDecorationTheme(
     errorMaxLines: 3,
@@ -62,32 +68,35 @@ class MyTextFormFieldTheme {
 
     errorStyle: const TextStyle().copyWith(fontStyle: FontStyle.normal),
 
+    filled: true,
+    fillColor: MyColors.secondary,
+
     floatingLabelStyle:
     const TextStyle().copyWith(color: Colors.white.withOpacity(0.8)),
 
     border: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(14),
-      borderSide: const BorderSide(width: 1, color: Colors.grey),
+      borderSide: BorderSide.none,
     ),
 
     enabledBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(14),
-      borderSide: const BorderSide(width: 1, color: Colors.grey),
+      borderSide: BorderSide.none,
     ),
 
     focusedBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(14),
-      borderSide: const BorderSide(width: 1, color: Colors.white),
+      borderSide: BorderSide.none,
     ),
 
     errorBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(14),
-      borderSide: const BorderSide(width: 1, color: Colors.red),
+      borderSide: BorderSide.none,
     ),
 
     focusedErrorBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(14),
-      borderSide: const BorderSide(width: 2, color: Colors.orange),
+      borderSide: BorderSide.none,
     ),
   );
 }
