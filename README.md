@@ -11,17 +11,17 @@ individual users seeking better health management tools.
 Here’s a preview of the HealthCarePro app:
 
 <img src="screenshoots/Screenshot_2024-12-01-23-40-04-13_edb91391ebcbfbd42b3246f2fcb7acf6.jpg" alt="Splash Screen" width="200">
-* Simple Splash Screen.*
+*Simple Splash Screen.*
 
 <img src="screenshoots/Screenshot_2024-12-01-23-43-14-21_edb91391ebcbfbd42b3246f2fcb7acf6.jpg" alt="On Boarding Screen One" width="200">
-* Choose your Doctor*
+*Choose your Doctor*
 
 <img src="screenshoots/Screenshot_2024-12-01-23-43-17-03_edb91391ebcbfbd42b3246f2fcb7acf6.jpg" alt="On Boarding Screen Two" width="200">
-* Seamless appointment scheduling and management.*
+*Seamless appointment scheduling and management.*
 
 
 <img src="screenshoots/Screenshot_2024-12-01-23-43-20-83_edb91391ebcbfbd42b3246f2fcb7acf6.jpg" alt="On Boarding Screen Three" width="200">
-* Track your health.*
+*Track your health.*
 
 <img src="screenshoots/Screenshot_2024-12-01-23-43-24-77_edb91391ebcbfbd42b3246f2fcb7acf6.jpg" alt="Start Screen" width="200">
 *Detailed health insights and analytics for users.*
