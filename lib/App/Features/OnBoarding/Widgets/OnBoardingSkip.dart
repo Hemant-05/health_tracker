@@ -15,18 +15,20 @@ class OnBoardingSkip extends StatelessWidget {
   Widget build(BuildContext context) {
     bool isDark = MyHelperFunctions.isDarkMode(context);
     return Positioned(
-      height: MyDeviceUtils.getAppBarHeight() + 25,
+      height: MyDeviceUtils.getAppBarHeight() + 50,
       right: MySizes.defaultSpace,
-      child: Row(
-        children: [
-          TextButton(
-            onPressed: () => OnBoardingController.instance.skipPage(context),
-            child: Text(
-              TextStrings.skip ,style: TextStyle(color: isDark? MyColors.white : Colors.black,fontSize: 20),
+      child: InkWell(
+        onTap: () => OnBoardingController.instance.skipPage(context),
+        child: Row(
+          children: [
+            Text(
+              TextStrings.skip,
+              style: TextStyle(
+                  color: isDark ? MyColors.white : Colors.black, fontSize: 20),
             ),
-          ),
-          const Icon(Icons.chevron_right)
-        ],
+            const Icon(Icons.chevron_right)
+          ],
+        ),
       ),
     );
   }
