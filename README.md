@@ -10,21 +10,25 @@ individual users seeking better health management tools.
 
 Here’s a preview of the HealthCarePro app:
 
-![Splash Screen](screenshoots/Screenshot_2024-12-01-23-40-04-13_edb91391ebcbfbd42b3246f2fcb7acf6.jpg)
+<img src="screenshoots/Screenshot_2024-12-01-23-40-04-13_edb91391ebcbfbd42b3246f2fcb7acf6.jpg" alt="Splash Screen" width="200">
 * Simple Splash Screen.*
 
-![On Boarding Screen One](screenshoots/Screenshot_2024-12-01-23-43-14-21_edb91391ebcbfbd42b3246f2fcb7acf6.jpg)
+<img src="screenshoots/Screenshot_2024-12-01-23-43-14-21_edb91391ebcbfbd42b3246f2fcb7acf6.jpg" alt="On Boarding Screen One" width="200">
 * Choose your Doctor*
-![On Boarding Screen Two ](screenshoots/Screenshot_2024-12-01-23-43-17-03_edb91391ebcbfbd42b3246f2fcb7acf6.jpg)
+
+<img src="screenshoots/Screenshot_2024-12-01-23-43-17-03_edb91391ebcbfbd42b3246f2fcb7acf6.jpg" alt="On Boarding Screen Two" width="200">
 * Seamless appointment scheduling and management.*
-![On Boarding Screen Three](screenshoots/Screenshot_2024-12-01-23-43-20-83_edb91391ebcbfbd42b3246f2fcb7acf6.jpg)
+
+
+<img src="screenshoots/Screenshot_2024-12-01-23-43-20-83_edb91391ebcbfbd42b3246f2fcb7acf6.jpg" alt="On Boarding Screen Three" width="200">
 * Track your health.*
 
-![Start Screen](screenshoots/Screenshot_2024-12-01-23-43-24-77_edb91391ebcbfbd42b3246f2fcb7acf6.jpg)
+<img src="screenshoots/Screenshot_2024-12-01-23-43-24-77_edb91391ebcbfbd42b3246f2fcb7acf6.jpg" alt="Start Screen" width="200">
 *Detailed health insights and analytics for users.*
 
-![Log In](screenshoots/Screenshot_2024-12-01-23-43-30-46_edb91391ebcbfbd42b3246f2fcb7acf6.jpg)
-![Sign Up](screenshoots/Screenshot_2024-12-01-23-43-34-92_edb91391ebcbfbd42b3246f2fcb7acf6.jpg)
+<img src="screenshoots/Screenshot_2024-12-01-23-43-30-46_edb91391ebcbfbd42b3246f2fcb7acf6.jpg" alt="Log In" width="200">
+<img src="screenshoots/Screenshot_2024-12-01-23-43-34-92_edb91391ebcbfbd42b3246f2fcb7acf6.jpg" alt="Sign Up" width="200">
+
 
 *User-friendly home screen with quick access to key features.*
 
