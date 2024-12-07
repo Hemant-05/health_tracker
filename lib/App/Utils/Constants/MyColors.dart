@@ -4,9 +4,9 @@ class MyColors {
   MyColors._();
 
 //
-  static const Color primary = Color(0xFF83C5BE);
+  static const Color primary = Color(0xFF36DACC);
   static const Color secondary = Color.fromRGBO(
-      131, 197, 190, 0.20);
+      121, 255, 242, 0.3);
   static const Color accent = Color(0xFFb0c7ff);
 
 // Text Colors

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:health_tracker/App/Common/MyElevatedButton.dart';
 import 'package:health_tracker/App/Features/OnBoarding/Controller/OnBoardingController.dart';
 import 'package:health_tracker/App/Features/OnBoarding/Widgets/OnBoardingButton.dart';
 import 'package:health_tracker/App/Features/OnBoarding/Widgets/OnBoardingDotIndicator.dart';
@@ -8,6 +7,7 @@ import 'package:health_tracker/App/Features/OnBoarding/Widgets/OnBoardingPage.da
 import 'package:health_tracker/App/Features/OnBoarding/Widgets/OnBoardingSkip.dart';
 import 'package:health_tracker/App/Utils/Constants/ImageStrings.dart';
 import 'package:health_tracker/App/Utils/Constants/TextStrings.dart';
+
 class ONBoardingScreen extends StatelessWidget {
   const ONBoardingScreen({super.key});
 

@@ -6,7 +6,7 @@ import 'package:health_tracker/App/Features/Authentication/Widgets/MyTextFormFie
 import 'package:health_tracker/App/Features/Authentication/Widgets/WelcomeGreet.dart';
 import 'package:health_tracker/App/Features/Authentication/Widgets/forget_pass_button.dart';
 import 'package:health_tracker/App/Features/Authentication/Widgets/other_login_optoins.dart';
-import 'package:health_tracker/App/HomeScreen.dart';
+import 'package:health_tracker/App/Features/Home/screens/HomeScreen.dart';
 import 'package:health_tracker/App/Utils/Constants/MyColors.dart';
 import 'package:health_tracker/App/Utils/Constants/MySizes.dart';
 import 'package:health_tracker/App/Utils/Constants/TextStrings.dart';
