@@ -5,7 +5,7 @@ import 'package:health_tracker/App/Utils/Constants/MySizes.dart';
 import 'package:health_tracker/App/Utils/Device/DeviceUtility.dart';
 import 'package:health_tracker/App/Utils/Helpers/Helpers.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import '../Controller/OnBoardingController.dart';
+import '../Controller/on_boarding_controller.dart';
 
 class OnBoardingDotIndicator extends StatelessWidget {
   const OnBoardingDotIndicator({

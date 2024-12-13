@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import 'package:health_tracker/App/Features/Authentication/Screens/StartScreen.dart';
+import 'package:health_tracker/App/Features/Authentication/Screens/start_screen.dart';
 import 'package:health_tracker/App/Utils/Helpers/Helpers.dart';
 
 class OnBoardingController extends GetxController {

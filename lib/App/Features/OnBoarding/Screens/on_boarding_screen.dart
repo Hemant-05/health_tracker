@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:health_tracker/App/Features/OnBoarding/Controller/OnBoardingController.dart';
-import 'package:health_tracker/App/Features/OnBoarding/Widgets/OnBoardingButton.dart';
-import 'package:health_tracker/App/Features/OnBoarding/Widgets/OnBoardingDotIndicator.dart';
-import 'package:health_tracker/App/Features/OnBoarding/Widgets/OnBoardingPage.dart';
-import 'package:health_tracker/App/Features/OnBoarding/Widgets/OnBoardingSkip.dart';
+import 'package:health_tracker/App/Features/OnBoarding/Controller/on_boarding_controller.dart';
+import 'package:health_tracker/App/Features/OnBoarding/Widgets/on_boarding_button.dart';
+import 'package:health_tracker/App/Features/OnBoarding/Widgets/on_boarding_dot_indicator.dart';
+import 'package:health_tracker/App/Features/OnBoarding/Widgets/on_boarding_page.dart';
+import 'package:health_tracker/App/Features/OnBoarding/Widgets/on_boarding_skip.dart';
 import 'package:health_tracker/App/Utils/Constants/ImageStrings.dart';
 import 'package:health_tracker/App/Utils/Constants/TextStrings.dart';
 

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:health_tracker/App/Common/MyElevatedButton.dart';
-import 'package:health_tracker/App/Features/Authentication/Screens/LogInScreen.dart';
-import 'package:health_tracker/App/Features/Authentication/Widgets/MyTextFormField.dart';
+import 'package:health_tracker/App/Common/my_elevated_button.dart';
+import 'package:health_tracker/App/Features/Authentication/Screens/logIn_screen.dart';
+import 'package:health_tracker/App/Features/Authentication/Widgets/my_text_form_field.dart';
 import 'package:health_tracker/App/Features/Authentication/Widgets/authentication_app_bar.dart';
 import 'package:health_tracker/App/Features/Authentication/Widgets/other_login_optoins.dart';
 import 'package:health_tracker/App/Features/Authentication/Widgets/term_and_condition.dart';
-import 'package:health_tracker/App/Features/Home/screens/HomeScreen.dart';
+import 'package:health_tracker/App/Features/Home/screens/home_screen.dart';
 import 'package:health_tracker/App/Utils/Constants/MyColors.dart';
 import 'package:health_tracker/App/Utils/Constants/MySizes.dart';
 import 'package:health_tracker/App/Utils/Constants/TextStrings.dart';

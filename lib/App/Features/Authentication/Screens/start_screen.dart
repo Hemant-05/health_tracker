@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:health_tracker/App/Common/ElevatedLogo.dart';
-import 'package:health_tracker/App/Common/MyElevatedButton.dart';
-import 'package:health_tracker/App/Features/Authentication/Screens/LogInScreen.dart';
-import 'package:health_tracker/App/Features/Authentication/Screens/SignUpScreen.dart';
+import 'package:health_tracker/App/Common/elevated_logo.dart';
+import 'package:health_tracker/App/Common/my_elevated_button.dart';
+import 'package:health_tracker/App/Features/Authentication/Screens/logIn_screen.dart';
+import 'package:health_tracker/App/Features/Authentication/Screens/sign_up_screen.dart';
 import 'package:health_tracker/App/Utils/Constants/MyColors.dart';
 import 'package:health_tracker/App/Utils/Constants/MySizes.dart';
 import 'package:health_tracker/App/Utils/Constants/TextStrings.dart';

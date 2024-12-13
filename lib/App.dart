@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:health_tracker/App/Features/Authentication/Screens/LogInScreen.dart';
-import 'package:health_tracker/App/Features/Authentication/Screens/SignUpScreen.dart';
-import 'package:health_tracker/App/Features/Authentication/Screens/StartScreen.dart';
-import 'package:health_tracker/App/Features/OnBoarding/Screens/OnBoardingScreen.dart';
-import 'package:health_tracker/App/Features/Home/screens/HomeScreen.dart';
+import 'package:health_tracker/App/Features/Authentication/Screens/logIn_screen.dart';
+import 'package:health_tracker/App/Features/Authentication/Screens/sign_up_screen.dart';
+import 'package:health_tracker/App/Features/Authentication/Screens/start_screen.dart';
+import 'package:health_tracker/App/Features/OnBoarding/Screens/on_boarding_screen.dart';
+import 'package:health_tracker/App/Features/Home/screens/home_screen.dart';
 import 'package:health_tracker/App/Utils/Theme/Theme.dart';
 
 class MyApp extends StatelessWidget {

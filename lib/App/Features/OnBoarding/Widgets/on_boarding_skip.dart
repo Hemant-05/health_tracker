@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:health_tracker/App/Features/OnBoarding/Controller/OnBoardingController.dart';
+import 'package:health_tracker/App/Features/OnBoarding/Controller/on_boarding_controller.dart';
 import 'package:health_tracker/App/Utils/Constants/MyColors.dart';
 import 'package:health_tracker/App/Utils/Constants/MySizes.dart';
 import 'package:health_tracker/App/Utils/Constants/TextStrings.dart';
