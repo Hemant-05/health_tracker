@@ -6,7 +6,7 @@ import 'package:health_tracker/App/Features/Authentication/Widgets/my_text_form_
 import 'package:health_tracker/App/Features/Authentication/Widgets/welcome_greet.dart';
 import 'package:health_tracker/App/Features/Authentication/Widgets/forget_pass_button.dart';
 import 'package:health_tracker/App/Features/Authentication/Widgets/other_login_optoins.dart';
-import 'package:health_tracker/App/Features/Home/screens/home_screen.dart';
+import 'package:health_tracker/App/Features/Home/screens/home_tab_bar.dart';
 import 'package:health_tracker/App/Utils/Constants/MyColors.dart';
 import 'package:health_tracker/App/Utils/Constants/MySizes.dart';
 import 'package:health_tracker/App/Utils/Constants/TextStrings.dart';
@@ -73,7 +73,7 @@ class LogInScreen extends StatelessWidget {
                       /*if(_formKey.currentState!.validate()){
                         print("log in ");
                       }*/
-                      MyHelperFunctions.navigateToScreenRemoveUntil(context, const HomeScreen());
+                      MyHelperFunctions.navigateToScreenRemoveUntil(context, const HomeTabBar());
                     },
                     text: TextStrings.login,
                   ),

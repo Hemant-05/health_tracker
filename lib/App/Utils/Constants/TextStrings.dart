@@ -46,6 +46,8 @@ class TextStrings{
   static const String alreadyHaveAnAccount = "I already have an account ";
   static const String doNotHaveAnAccount = "Don\'t have an account? ";
   static const String quote = "Spread love everywhere...";
+  static const String messages = "Messages";
+  static const String notification = "Notification";
 
 // Authentication Headings Text
   static const String loginTitle = "Login";

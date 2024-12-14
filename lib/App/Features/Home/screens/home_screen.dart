@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:health_tracker/App/Features/Home/widgets/icon_button.dart';
+import 'package:health_tracker/App/Features/Messages/Screens/notification_screen.dart';
+import 'package:health_tracker/App/Features/Profile/screens/edit_profile_screen.dart';
+import 'package:health_tracker/App/Features/filter_screen.dart';
 import 'package:health_tracker/App/Utils/Constants/IconsStrings.dart';
 import 'package:health_tracker/App/Utils/Constants/MyColors.dart';
 import 'package:health_tracker/App/Utils/Constants/MySizes.dart';
+import 'package:health_tracker/App/Utils/Helpers/Helpers.dart';
 import 'package:health_tracker/App/Utils/LocalStorage/LocalData.dart';
-
 import '../widgets/categories_icons.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -16,7 +19,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int selected_tab = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,8 +28,11 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             Row(
               children: [
-                MyIconButton(IconsString.notificationIcon,() {  },context),
-                MyIconButton(IconsString.settingsIcon, () {},context),
+                MyIconButton(IconsString.notificationIcon,(){
+                  MyHelperFunctions.navigateToScreen(context, NotificationScreen());
+                },context),
+                MyIconButton(IconsString.settingsIcon, () {
+                },context),
                 MyIconButton(IconsString.searchIcon, () {},context),
               ],
             ),
@@ -38,7 +43,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     Align(
                       child: SvgPicture.asset(IconsString.editIcon),
                     ),
-                    MyIconButton(IconsString.userIcon, () {},context),
+                    MyIconButton(IconsString.userIcon, () {
+                      MyHelperFunctions.navigateToScreen(context, const EditProfileScreen());
+                    },context),
                   ],
                 )
               ],
@@ -190,21 +197,6 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: selected_tab,
-          elevation: 50,
-          selectedItemColor: Colors.black,
-          onTap: (index){
-          setState(() {
-            selected_tab = index;
-          });
-          },
-          items: [
-        BottomNavigationBarItem(icon: SvgPicture.asset(IconsString.homeIcon,color: Colors.grey,),label: 'home',),
-        BottomNavigationBarItem(icon: SvgPicture.asset(IconsString.messageIcon,color: Colors.grey,),label: 'messages'),
-        BottomNavigationBarItem(icon: SvgPicture.asset(IconsString.userIcon,color: Colors.grey,),label: 'profile'),
-        BottomNavigationBarItem(icon: SvgPicture.asset(IconsString.calendarIcon,color: Colors.grey,),label: 'schedules'),
-      ]),
     );
   }
 }

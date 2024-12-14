@@ -6,6 +6,7 @@ import 'package:health_tracker/App/Features/Authentication/Widgets/authenticatio
 import 'package:health_tracker/App/Features/Authentication/Widgets/other_login_optoins.dart';
 import 'package:health_tracker/App/Features/Authentication/Widgets/term_and_condition.dart';
 import 'package:health_tracker/App/Features/Home/screens/home_screen.dart';
+import 'package:health_tracker/App/Features/Home/screens/home_tab_bar.dart';
 import 'package:health_tracker/App/Utils/Constants/MyColors.dart';
 import 'package:health_tracker/App/Utils/Constants/MySizes.dart';
 import 'package:health_tracker/App/Utils/Constants/TextStrings.dart';
@@ -75,7 +76,7 @@ class SignUpScreen extends StatelessWidget {
                   alignment: Alignment.center,
                   child: MyElevatedButton(
                     fun: () {
-                      MyHelperFunctions.navigateToScreenRemoveUntil(context,const HomeScreen());
+                      MyHelperFunctions.navigateToScreenRemoveUntil(context,const HomeTabBar());
                     },
                     text: TextStrings.signUp,
                   ),
