@@ -3,7 +3,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:health_tracker/App/Features/Home/widgets/icon_button.dart';
 import 'package:health_tracker/App/Features/Messages/Screens/notification_screen.dart';
 import 'package:health_tracker/App/Features/Profile/screens/edit_profile_screen.dart';
-import 'package:health_tracker/App/Features/filter_screen.dart';
 import 'package:health_tracker/App/Utils/Constants/IconsStrings.dart';
 import 'package:health_tracker/App/Utils/Constants/MyColors.dart';
 import 'package:health_tracker/App/Utils/Constants/MySizes.dart';
