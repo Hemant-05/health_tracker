@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:health_tracker/App/Utils/Constants/ImageStrings.dart';
-import 'package:health_tracker/App/Utils/Constants/MySizes.dart';
 
 class ElevatedLogo extends StatelessWidget {
   const ElevatedLogo({
@@ -10,6 +9,6 @@ class ElevatedLogo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  SvgPicture.asset(ImageStrings.appLogoLight,height: 150);
+    return SvgPicture.asset(ImageStrings.appLogoLight, height: 150);
   }
 }

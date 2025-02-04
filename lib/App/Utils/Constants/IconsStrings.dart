@@ -1,5 +1,4 @@
-class IconsString{
-
+class IconsString {
   static const String homeIcon = "assets/icons/home.svg";
   static const String lockIcon = "assets/icons/lock.svg";
   static const String userIcon = "assets/icons/user.svg";
@@ -30,6 +29,6 @@ class IconsString{
   static const String specialtiesIcon = "assets/icons/specialties.svg";
   static const String stethescopeIcon = "assets/icons/stethescop.svg";
   static const String medicinsIcon = "assets/icons/medicins.svg";
-  static const String ophtamology = "assets/icons/ophtamology.svg";
-
+  static const String ophthalmologIcon = "assets/icons/ophtamology.svg";
+  static const String physiotherapistIcon = "assets/icons/ophtamology.svg";
 }
