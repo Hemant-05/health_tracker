@@ -2,9 +2,7 @@
 
 ### A Project that can help you to maintain your health in simple steps.
 
-A modern healthcare app designed to streamline patient management, enhance doctor-patient
-communication, and offer personalized health insights. Perfect for clinics, hospitals, and
-individual users seeking better health management tools.
+A seamless platform for booking doctor appointments, featuring real-time chat for consultations, doctor profiles, and appointment management. Users can explore pharmacy stores, save favorite doctors, and receive notifications. Secure authentication with Firebase ensures a safe and reliable experience. 🚀
 
 ## ScreenShoots
 
@@ -40,10 +38,21 @@ Here’s a preview of the HealthCarePro app:
 
 
 ## Features
-- **Appointment Scheduling:** Easy scheduling with reminders for patients and doctors. (Not Implemented)
-- **Health Insights Dashboard:** Visualize health data trends. (Not Implemented)
-- **Secure Messaging:** Encrypted communication between patients and healthcare providers.  (Not Implemented)
-- **Personalized Health Tips:** AI-driven health improvement suggestions. (Not Implemented)
+🏥 **Doctor Profiles** – View doctor details, specialties, and availability
+
+📅 **Appointment Booking** – Schedule and manage appointments easily
+
+💬 **Real-time Chat** – Secure messaging with doctors
+
+🔐 **Firebase Authentication** – Secure login and user management
+
+📌 **Notifications – Appointment** reminders and updates
+
+🌐 **Online & Offline Access** – Smooth experience even with low connectivity
+
+💊 **Pharmacy Stores** – Browse nearby pharmacies
+
+⭐ **Favorite Doctors** – Save preferred doctors for quick access
 
 ## Technologies Used
 - **Frontend:** Flutter
