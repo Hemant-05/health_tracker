@@ -47,6 +47,6 @@ Here’s a preview of the HealthCarePro app:
 
 ## Technologies Used
 - **Frontend:** Flutter
-- **Backend:** SpringBoot  (Not Implemented)
+- **Backend:** Firebase 
 - **Database:** MongoDB  (Not Implemented)
 - **APIs:** OpenAI for health insights, Twilio for messaging  (Not Implemented)
