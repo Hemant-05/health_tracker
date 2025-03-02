@@ -27,13 +27,6 @@ class _HomeScreenState extends State<HomeScreen> {
   List<Map<String, dynamic>> doctorsData = [];
 
   @override
-  void initState() {
-    super.initState();
-    // Attempt to sign in automatically on screen load (you can also call this on a button press)
-    signInWithGoogle();
-  }
-
-  @override
   Widget build(BuildContext context) {
     final User? user = FirebaseAuth.instance.currentUser;
     final String? profilePictureUrl = user?.photoURL;

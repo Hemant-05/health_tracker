@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:health_tracker/App/Common/widgets/back_button.dart';
+import 'package:health_tracker/App/Features/Home/screens/doctor_profile_screen.dart';
 import 'package:health_tracker/App/Features/Messages/Widgets/audio_bubble.dart';
 import 'package:health_tracker/App/Features/Messages/Widgets/chat_bubble.dart';
 import 'package:health_tracker/App/Utils/Constants/MyColors.dart';
+import 'package:health_tracker/App/Utils/LocalStorage/doctor_data.dart';
 import 'package:iconsax/iconsax.dart';
 
 class ChatScreen extends StatefulWidget {
@@ -33,14 +35,15 @@ class _ChatScreenState extends State<ChatScreen> {
               backgroundImage: AssetImage(widget.doctorImage),
             ),
             const SizedBox(width: 10),
-            Text(
-              widget.doctorName,
-              style: Theme.of(context)
-                  .textTheme
-                  .headlineMedium!
-                  .copyWith(color: MyColors.white),
-              // overflow: TextOverflow.ellipsis,
-              // maxLines: 1,
+            Expanded(
+              child: Text(
+                widget.doctorName,
+                style: Theme.of(context)
+                    .textTheme
+                    .headlineMedium!
+                    .copyWith(color: MyColors.white),
+                overflow: TextOverflow.ellipsis,
+              ),
             ),
           ],
         ),
@@ -70,11 +73,6 @@ class _ChatScreenState extends State<ChatScreen> {
                   message: "I have a question about my health.",
                   isSentByMe: true,
                   timestamp: "09:30",
-                ),
-                AudioBubble(
-                  duration: "02:50",
-                  isSentByMe: false,
-                  timestamp: "09:50",
                 ),
               ],
             ),

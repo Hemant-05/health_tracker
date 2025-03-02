@@ -19,7 +19,7 @@ class PaymentSuccessScreen extends StatelessWidget {
         centerTitle: true,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(60),
+        padding: const EdgeInsets.all(25),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [

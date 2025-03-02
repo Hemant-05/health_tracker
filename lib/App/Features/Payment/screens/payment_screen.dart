@@ -24,128 +24,130 @@ class PaymentScreen extends StatelessWidget {
           backgroundColor: MyColors.primary,
           elevation: 0,
           leading: backButton(context)),
-      body: Column(
-        children: [
-          Container(
-            color: MyColors.primary,
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(vertical: 20),
-            child: Column(
-              children: [
-                Text(
-                  "\$100.00",
-                  style: Theme.of(context)
-                      .textTheme
-                      .titleLarge
-                      ?.copyWith(fontSize: 36, color: MyColors.white),
-                ),
-                const SizedBox(height: 10),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    CircleAvatar(
-                        radius: 30,
-                        child: CircleAvatar(
-                          backgroundColor: Colors.white,
-                          backgroundImage: AssetImage(doctorImage),
-                        ) // Replace with actual image
-                        ),
-                    const SizedBox(width: 10),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          doctorName,
-                          style: Theme.of(context)
-                              .textTheme
-                              .titleSmall
-                              ?.copyWith(color: MyColors.white),
-                        ),
-                        Text(
-                          specislistIn,
-                          style: Theme.of(context)
-                              .textTheme
-                              .titleSmall
-                              ?.copyWith(fontSize: 12, color: Colors.white),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(width: 10),
-                    const Icon(Icons.verified, color: Colors.white, size: 20),
-                  ],
-                ),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                _buildInfoRow(
-                    context, "Date / Hour", "Month 24, Year / 10:00 AM"),
-                _buildInfoRow(context, "Duration", "30 Minutes"),
-                _buildInfoRow(context, "Booking for", "Jhon Doe"),
-                const Divider(),
-                _buildInfoRow(context, "Amount", "\$100.00"),
-                _buildInfoRow(context, "Duration", "30 Minutes"),
-                const Divider(),
-                _buildInfoRow(context, "Total", "\$100", bold: true),
-                const SizedBox(height: 10),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Payment Method",
-                      style: Theme.of(context).textTheme.titleSmall,
-                    ),
-                    Row(
-                      children: [
-                        Text(
-                          "Card",
-                          style: Theme.of(context).textTheme.titleSmall,
-                        ),
-                        const SizedBox(width: 5),
-                        TextButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        const PaymentMethodScreen()));
-                          },
-                          child: Text(
-                            "Change",
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              color: MyColors.primary,
+              width: double.infinity,
+              padding: const EdgeInsets.symmetric(vertical: 20),
+              child: Column(
+                children: [
+                  Text(
+                    "\$100.00",
+                    style: Theme.of(context)
+                        .textTheme
+                        .titleLarge
+                        ?.copyWith(fontSize: 36, color: MyColors.white),
+                  ),
+                  const SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      CircleAvatar(
+                          radius: 30,
+                          child: CircleAvatar(
+                            backgroundColor: Colors.white,
+                            backgroundImage: AssetImage(doctorImage),
+                          ) // Replace with actual image
+                          ),
+                      const SizedBox(width: 10),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            doctorName,
                             style: Theme.of(context)
                                 .textTheme
                                 .titleSmall
-                                ?.copyWith(color: MyColors.primary),
+                                ?.copyWith(color: MyColors.white),
                           ),
-                        )
-                      ],
-                    ),
-                  ],
-                ),
-              ],
+                          Text(
+                            specislistIn,
+                            style: Theme.of(context)
+                                .textTheme
+                                .titleSmall
+                                ?.copyWith(fontSize: 12, color: Colors.white),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(width: 10),
+                      const Icon(Icons.verified, color: Colors.white, size: 20),
+                    ],
+                  ),
+                ],
+              ),
             ),
-          ),
-          Expanded(child: Container()),
-          Container(
-            padding: const EdgeInsets.all(MySizes.md),
-            width: double.infinity,
-            child: CustomElevatedButton(
-                fun: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => PaymentSuccessScreen(
-                              doctorName: doctorName,
-                            )),
-                  );
-                },
-                text: 'Pay Now'),
-          ),
-        ],
+            Padding(
+              padding: const EdgeInsets.all(20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  _buildInfoRow(
+                      context, "Date / Hour", "Month 24, Year / 10:00 AM"),
+                  _buildInfoRow(context, "Duration", "30 Minutes"),
+                  _buildInfoRow(context, "Booking for", "Jhon Doe"),
+                  const Divider(),
+                  _buildInfoRow(context, "Amount", "\$100.00"),
+                  _buildInfoRow(context, "Duration", "30 Minutes"),
+                  const Divider(),
+                  _buildInfoRow(context, "Total", "\$100", bold: true),
+                  const SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Payment Method",
+                        style: Theme.of(context).textTheme.titleSmall,
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            "Card",
+                            style: Theme.of(context).textTheme.titleSmall,
+                          ),
+                          const SizedBox(width: 5),
+                          TextButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const PaymentMethodScreen()));
+                            },
+                            child: Text(
+                              "Change",
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .titleSmall
+                                  ?.copyWith(color: MyColors.primary),
+                            ),
+                          )
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            // Expanded(child: Container()),
+            Container(
+              padding: const EdgeInsets.all(MySizes.md),
+              width: double.infinity,
+              child: CustomElevatedButton(
+                  fun: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => PaymentSuccessScreen(
+                                doctorName: doctorName,
+                              ),),
+                    );
+                  },
+                  text: 'Pay Now'),
+            ),
+          ],
+        ),
       ),
     );
   }
