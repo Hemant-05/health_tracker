@@ -1,20 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:health_tracker/App/Common/back_button.dart';
+import 'package:health_tracker/App/Common/widgets/back_button.dart';
 import 'package:health_tracker/App/Utils/Constants/MyColors.dart';
-import 'package:health_tracker/App/Utils/LocalStorage/LocalData.dart';
+import 'package:health_tracker/App/Utils/LocalStorage/local_data.dart';
 
 class NotificationScreen extends StatelessWidget {
+  const NotificationScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: MyColors.primary,
-        elevation: 0,
-        centerTitle: true,
-        title: Text('Notification',style: Theme.of(context).textTheme.headlineMedium!
-            .copyWith(color: MyColors.white),),
-        leading: backButton(context)
-      ),
+          backgroundColor: MyColors.primary,
+          elevation: 0,
+          centerTitle: true,
+          title: Text(
+            'Notification',
+            style: Theme.of(context)
+                .textTheme
+                .headlineMedium!
+                .copyWith(color: MyColors.white),
+          ),
+          leading: backButton(context)),
       body: Column(
         children: [
           // Top Section with "Today" button, search bar, and "Mark all"
@@ -30,45 +36,45 @@ class NotificationScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
-                  child: Text("Today"),
+                  child: const Text("Today"),
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 Expanded(
                   child: TextField(
                     decoration: InputDecoration(
                       hintText: "Search...",
-                      prefixIcon: Icon(Icons.search),
-                      contentPadding: EdgeInsets.symmetric(horizontal: 10),
+                      prefixIcon: const Icon(Icons.search),
+                      contentPadding:
+                          const EdgeInsets.symmetric(horizontal: 10),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20),
-                        borderSide: BorderSide(color: Colors.grey),
+                        borderSide: const BorderSide(color: Colors.grey),
                       ),
                     ),
                   ),
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 TextButton(
                   onPressed: () {},
-                  child: Text("Mark all"),
+                  child: const Text("Mark all"),
                 ),
               ],
             ),
           ),
           Expanded(
-            child: ListView(
-              children: [
-                // Timing header section :-
-                SectionHeader(title: "Today"),
-                LocalData.notificationsList[0],
-                LocalData.notificationsList[1],
-                LocalData.notificationsList[2],
-                LocalData.notificationsList[3],
-                LocalData.notificationsList[4],
-                LocalData.notificationsList[5],
-                LocalData.notificationsList[6],
-              ],
-            )
-          ),
+              child: ListView(
+            children: [
+              // Timing header section :-
+              const SectionHeader(title: "Today"),
+              Notifications.notificationsList[0],
+              Notifications.notificationsList[1],
+              Notifications.notificationsList[2],
+              Notifications.notificationsList[3],
+              Notifications.notificationsList[4],
+              Notifications.notificationsList[5],
+              Notifications.notificationsList[6],
+            ],
+          )),
         ],
       ),
     );
@@ -78,7 +84,7 @@ class NotificationScreen extends StatelessWidget {
 class SectionHeader extends StatelessWidget {
   final String title;
 
-  SectionHeader({required this.title});
+  const SectionHeader({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {

@@ -3,12 +3,13 @@ import 'package:health_tracker/App/Utils/Constants/MyColors.dart';
 import 'package:health_tracker/App/Utils/Constants/TextStrings.dart';
 
 class MyTextFormField extends StatefulWidget {
-  const MyTextFormField(
-      {super.key,
-      required this.controller,
-      required this.label,
-      required this.icon,
-      required this.isObscure});
+  const MyTextFormField({
+    super.key,
+    required this.controller,
+    required this.label,
+    required this.icon,
+    required this.isObscure,
+  });
 
   final TextEditingController controller;
   final String label;
@@ -25,10 +26,11 @@ class _MyTextFormFieldState extends State<MyTextFormField> {
   Widget build(BuildContext context) {
     return TextFormField(
       validator: (value) {
-        if(value!.isEmpty){
+        if (value!.isEmpty) {
           return "Please fill ${widget.label}";
         }
-        if(widget.label == TextStrings.exampleEmail && (!value.contains('@') && !value.contains('.com'))) {
+        if (widget.label == TextStrings.exampleEmail &&
+            (!value.contains('@') && !value.contains('.com'))) {
           return "Please enter a valid email";
         }
         return null;

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:health_tracker/App/Common/back_button.dart';
+import 'package:health_tracker/App/Common/widgets/back_button.dart';
 import 'package:health_tracker/App/Utils/Constants/MyColors.dart';
 
-AppBar AuthenticationAppBar(BuildContext context,String title) {
+AppBar AuthenticationAppBar(BuildContext context, String title) {
   return AppBar(
     title: Text(
       title,

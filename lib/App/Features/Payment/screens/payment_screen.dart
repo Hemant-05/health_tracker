@@ -1,21 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:health_tracker/App/Common/back_button.dart';
-import 'package:health_tracker/App/Common/my_elevated_button.dart';
+import 'package:health_tracker/App/Common/widgets/back_button.dart';
+import 'package:health_tracker/App/Common/widgets/custom_elevated_button.dart';
+import 'package:health_tracker/App/Features/Payment/screens/payment_method_screen.dart';
+import 'package:health_tracker/App/Features/Payment/screens/payment_success_screen.dart';
 import 'package:health_tracker/App/Utils/Constants/MyColors.dart';
 import 'package:health_tracker/App/Utils/Constants/MySizes.dart';
 
 class PaymentScreen extends StatelessWidget {
-  const PaymentScreen({super.key});
+  final String doctorName;
+  final String doctorImage;
+  final String specislistIn;
+  const PaymentScreen(
+      {super.key,
+      required this.doctorName,
+      required this.doctorImage,
+      required this.specislistIn});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MyColors.white,
       appBar: AppBar(
-        backgroundColor: MyColors.primary,
-        elevation: 0,
-        leading: backButton(context)
-      ),
+          backgroundColor: MyColors.primary,
+          elevation: 0,
+          leading: backButton(context)),
       body: Column(
         children: [
           Container(
@@ -35,23 +43,26 @@ class PaymentScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const CircleAvatar(
-                      radius: 30,
-                      child: Icon(Icons.person) // Replace with actual image
-                    ),
+                    CircleAvatar(
+                        radius: 30,
+                        child: CircleAvatar(
+                          backgroundColor: Colors.white,
+                          backgroundImage: AssetImage(doctorImage),
+                        ) // Replace with actual image
+                        ),
                     const SizedBox(width: 10),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Dr. Emma Hall, M.D.",
+                          doctorName,
                           style: Theme.of(context)
                               .textTheme
                               .titleSmall
                               ?.copyWith(color: MyColors.white),
                         ),
                         Text(
-                          "General Doctor",
+                          specislistIn,
                           style: Theme.of(context)
                               .textTheme
                               .titleSmall
@@ -67,11 +78,12 @@ class PaymentScreen extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(MySizes.md),
+            padding: const EdgeInsets.all(20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                _buildInfoRow(context, "Date / Hour", "Month 24, Year / 10:00 AM"),
+                _buildInfoRow(
+                    context, "Date / Hour", "Month 24, Year / 10:00 AM"),
                 _buildInfoRow(context, "Duration", "30 Minutes"),
                 _buildInfoRow(context, "Booking for", "Jhon Doe"),
                 const Divider(),
@@ -94,26 +106,44 @@ class PaymentScreen extends StatelessWidget {
                           style: Theme.of(context).textTheme.titleSmall,
                         ),
                         const SizedBox(width: 5),
-                        Text(
-                          "Change",
-                          style: Theme.of(context)
-                              .textTheme
-                              .titleSmall
-                              ?.copyWith(color: MyColors.primary),
-                        ),
+                        TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const PaymentMethodScreen()));
+                          },
+                          child: Text(
+                            "Change",
+                            style: Theme.of(context)
+                                .textTheme
+                                .titleSmall
+                                ?.copyWith(color: MyColors.primary),
+                          ),
+                        )
                       ],
                     ),
                   ],
                 ),
-
               ],
             ),
           ),
           Expanded(child: Container()),
           Container(
-            padding: EdgeInsets.all(MySizes.md),
+            padding: const EdgeInsets.all(MySizes.md),
             width: double.infinity,
-            child: MyElevatedButton(fun: (){}, text: 'Pay Now'),
+            child: CustomElevatedButton(
+                fun: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => PaymentSuccessScreen(
+                              doctorName: doctorName,
+                            )),
+                  );
+                },
+                text: 'Pay Now'),
           ),
         ],
       ),

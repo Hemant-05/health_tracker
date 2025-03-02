@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class NotificationCard extends StatelessWidget {
@@ -8,7 +7,8 @@ class NotificationCard extends StatelessWidget {
   final IconData icon;
   final bool isHighlighted;
 
-  NotificationCard({
+  const NotificationCard({
+    super.key,
     required this.title,
     required this.description,
     required this.time,
@@ -19,8 +19,8 @@ class NotificationCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-      padding: EdgeInsets.all(16.0),
+      margin: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+      padding: const EdgeInsets.all(16.0),
       decoration: BoxDecoration(
         color: isHighlighted ? Colors.teal[50] : Colors.white,
         borderRadius: BorderRadius.circular(10),
@@ -29,7 +29,7 @@ class NotificationCard extends StatelessWidget {
           BoxShadow(
             color: Colors.grey.withOpacity(0.1),
             blurRadius: 5,
-            offset: Offset(0, 3),
+            offset: const Offset(0, 3),
           ),
         ],
       ),
@@ -37,7 +37,7 @@ class NotificationCard extends StatelessWidget {
         children: [
           // Leading Icon
           Container(
-            padding: EdgeInsets.all(8),
+            padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
               color: Colors.teal[100],
               shape: BoxShape.circle,
@@ -47,7 +47,7 @@ class NotificationCard extends StatelessWidget {
               color: Colors.teal,
             ),
           ),
-          SizedBox(width: 10),
+          const SizedBox(width: 10),
           // Notification Details
           Expanded(
             child: Column(
@@ -55,12 +55,12 @@ class NotificationCard extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 16,
                   ),
                 ),
-                SizedBox(height: 5),
+                const SizedBox(height: 5),
                 Text(
                   description,
                   style: TextStyle(color: Colors.grey[600], fontSize: 14),
@@ -71,7 +71,7 @@ class NotificationCard extends StatelessWidget {
           // Time
           Text(
             time,
-            style: TextStyle(color: Colors.grey),
+            style: const TextStyle(color: Colors.grey),
           ),
         ],
       ),

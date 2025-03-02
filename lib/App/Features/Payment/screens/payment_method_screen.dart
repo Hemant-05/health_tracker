@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:health_tracker/App/Common/back_button.dart';
-import 'package:health_tracker/App/Common/my_elevated_button.dart';
-import 'package:health_tracker/App/Common/show_snackbar.dart';
+import 'package:health_tracker/App/Common/widgets/back_button.dart';
+import 'package:health_tracker/App/Common/widgets/custom_elevated_button.dart';
+import 'package:health_tracker/App/Common/widgets/show_snackbar.dart';
 import 'package:health_tracker/App/Features/Payment/screens/add_new_card_screen.dart';
 import 'package:health_tracker/App/Features/Payment/screens/payment_screen.dart';
 import 'package:health_tracker/App/Features/Payment/widgets/payment_option_tile.dart';
@@ -17,7 +17,7 @@ class PaymentMethodScreen extends StatefulWidget {
 }
 
 class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
-  PaymentOptions? selected_option = null;
+  PaymentOptions? selected_option;
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +38,7 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Text(
@@ -46,7 +46,7 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
               style: Theme.of(context).textTheme.titleLarge,
             ),
           ),
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
           PaymentOptionTile(
             fun: () {
               setState(() {
@@ -57,7 +57,7 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
             title: 'Add New Card',
             isSelected: selected_option == PaymentOptions.NewCard,
           ),
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
           PaymentOptionTile(
             fun: () {
               setState(() {
@@ -68,7 +68,7 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
             title: 'Hemant sahu',
             isSelected: selected_option == PaymentOptions.Hemant,
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Text(
@@ -76,7 +76,7 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
               style: Theme.of(context).textTheme.titleLarge,
             ),
           ),
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
           PaymentOptionTile(
             fun: () {
               setState(() {
@@ -114,7 +114,7 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
               child: SizedBox(
                 width: double.infinity,
                 height: 50,
-                child: MyElevatedButton(
+                child: CustomElevatedButton(
                   fun: () {
                     switch (selected_option) {
                       case null:
@@ -123,11 +123,16 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
                         break;
                       case PaymentOptions.NewCard:
                         MyHelperFunctions.navigateToScreen(
-                            context, const  AddNewCardScreen());
+                            context, const AddNewCardScreen());
                         break;
                       case PaymentOptions.Hemant:
                         MyHelperFunctions.navigateToScreen(
-                            context, const  PaymentScreen());
+                            context,
+                            const PaymentScreen(
+                              doctorName: '',
+                              doctorImage: '',
+                              specislistIn: '',
+                            ));
                         break;
                       case PaymentOptions.Appple_Pay:
                         CustomSnackBar.showSnackBar(

@@ -8,8 +8,8 @@ import 'package:health_tracker/App/Features/OnBoarding/Widgets/on_boarding_skip.
 import 'package:health_tracker/App/Utils/Constants/ImageStrings.dart';
 import 'package:health_tracker/App/Utils/Constants/TextStrings.dart';
 
-class ONBoardingScreen extends StatelessWidget {
-  const ONBoardingScreen({super.key});
+class OnBoardingScreen extends StatelessWidget {
+  const OnBoardingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -46,6 +46,3 @@ class ONBoardingScreen extends StatelessWidget {
     );
   }
 }
-
-
-

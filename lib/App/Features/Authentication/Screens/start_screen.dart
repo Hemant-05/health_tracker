@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:health_tracker/App/Common/elevated_logo.dart';
-import 'package:health_tracker/App/Common/my_elevated_button.dart';
-import 'package:health_tracker/App/Features/Authentication/Screens/logIn_screen.dart';
+import 'package:health_tracker/App/Common/widgets/elevated_logo.dart';
+import 'package:health_tracker/App/Common/widgets/custom_elevated_button.dart';
+import 'package:health_tracker/App/Features/Authentication/Screens/login_screen.dart';
 import 'package:health_tracker/App/Features/Authentication/Screens/sign_up_screen.dart';
 import 'package:health_tracker/App/Utils/Constants/MyColors.dart';
 import 'package:health_tracker/App/Utils/Constants/MySizes.dart';
@@ -42,10 +42,11 @@ class StartScreen extends StatelessWidget {
                             ),
                           ),
                           TextSpan(
-                            text: 'Tracker',
+                            text: 'Mate',
                             style: TextStyle(
                               color: MyColors.primary,
                               fontSize: 30,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
                         ]),
@@ -61,7 +62,7 @@ class StartScreen extends StatelessWidget {
                   ),
                   Column(
                     children: [
-                      MyElevatedButton(
+                      CustomElevatedButton(
                         fun: () => MyHelperFunctions.navigateToScreen(
                             context, const LogInScreen()),
                         text: TextStrings.login,
@@ -69,7 +70,7 @@ class StartScreen extends StatelessWidget {
                       const SizedBox(
                         height: MySizes.spaceBtwItems * 0.6,
                       ),
-                      MyElevatedButton(
+                      CustomElevatedButton(
                         fun: () => MyHelperFunctions.navigateToScreen(
                             context, SignUpScreen()),
                         text: TextStrings.signUp,

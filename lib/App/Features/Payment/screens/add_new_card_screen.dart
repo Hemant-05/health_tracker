@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:health_tracker/App/Common/back_button.dart';
-import 'package:health_tracker/App/Common/my_elevated_button.dart';
+import 'package:health_tracker/App/Common/widgets/back_button.dart';
+import 'package:health_tracker/App/Features/Payment/screens/payment_screen.dart';
 import 'package:health_tracker/App/Utils/Constants/MyColors.dart';
 import 'package:health_tracker/App/Utils/Constants/MySizes.dart';
-import 'package:health_tracker/App/Utils/Helpers/Helpers.dart';
 
 class AddNewCardScreen extends StatelessWidget {
   const AddNewCardScreen({super.key});
@@ -18,8 +17,8 @@ class AddNewCardScreen extends StatelessWidget {
         title: Text(
           'Add Card',
           style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-            color: Colors.white,
-          ),
+                color: Colors.white,
+              ),
         ),
         leading: backButton(context),
       ),
@@ -110,7 +109,7 @@ class AddNewCardScreen extends StatelessWidget {
             TextField(
               decoration: InputDecoration(
                 hintText: 'John Doe',
-                hintStyle: TextStyle(color: Colors.grey),
+                hintStyle: const TextStyle(color: Colors.grey),
                 filled: true,
                 fillColor: MyColors.secondary,
                 border: OutlineInputBorder(
@@ -130,7 +129,7 @@ class AddNewCardScreen extends StatelessWidget {
             TextField(
               decoration: InputDecoration(
                 hintText: '000 000 000 00',
-                hintStyle: TextStyle(color: Colors.grey),
+                hintStyle: const TextStyle(color: Colors.grey),
                 filled: true,
                 fillColor: MyColors.secondary,
                 border: OutlineInputBorder(
@@ -157,7 +156,7 @@ class AddNewCardScreen extends StatelessWidget {
                       TextField(
                         decoration: InputDecoration(
                           hintText: '04/28',
-                          hintStyle: TextStyle(color: Colors.grey),
+                          hintStyle: const TextStyle(color: Colors.grey),
                           filled: true,
                           fillColor: MyColors.secondary,
                           border: OutlineInputBorder(
@@ -182,7 +181,7 @@ class AddNewCardScreen extends StatelessWidget {
                       TextField(
                         decoration: InputDecoration(
                           hintText: '0000',
-                          hintStyle: TextStyle(color: Colors.grey),
+                          hintStyle: const TextStyle(color: Colors.grey),
                           filled: true,
                           fillColor: MyColors.secondary,
                           border: OutlineInputBorder(
@@ -204,14 +203,21 @@ class AddNewCardScreen extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               height: 50,
-              child: MyElevatedButton(fun: (){
-                MyHelperFunctions.popUp(context);
-              }, text: 'Save Card')
-             ),
+              child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const PaymentScreen(
+                                doctorName: '',
+                                doctorImage: '',
+                                specislistIn: '')));
+                  },
+                  child: const Text('Save Card')),
+            )
           ],
         ),
       ),
     );
   }
 }
-

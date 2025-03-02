@@ -7,7 +7,8 @@ class PaymentOptionTile extends StatelessWidget {
   final bool isSelected;
   final VoidCallback fun;
 
-  PaymentOptionTile({
+  const PaymentOptionTile({
+    super.key,
     required this.icon,
     required this.title,
     this.isSelected = false,

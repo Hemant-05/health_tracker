@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:health_tracker/App/Features/Messages/Widgets/messages_contact.dart';
 import 'package:health_tracker/App/Utils/Constants/MyColors.dart';
 import 'package:health_tracker/App/Utils/Constants/TextStrings.dart';
 
 class MessagesScreen extends StatefulWidget {
-  const MessagesScreen({super.key});
+  const MessagesScreen({
+    super.key,
+  });
 
   @override
   State<MessagesScreen> createState() => _MessagesScreenState();
@@ -36,11 +37,9 @@ class _MessagesScreenState extends State<MessagesScreen> {
           ),
         ],
       ),
-      body: ListView.builder(
-        itemCount: 5,
-        itemBuilder: (context, index) {
-        return MessagesContact();
-      },),
+      // Listveiw builder
+      // body:
+      // ),
     );
   }
 }
