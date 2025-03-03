@@ -42,7 +42,7 @@ Here’s a preview of the HealthCarePro app:
 
 📅 **Appointment Booking** – Schedule and manage appointments easily
 
-💬 **Real-time Chat** – Secure messaging with doctors
+💬 **Chat** – Secure messaging with doctors
 
 🔐 **Firebase Authentication** – Secure login and user management
 
